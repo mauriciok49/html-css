@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="header">
+        <img src="lanchonete.jpg" alt="Pizzas, Salgados e Sucos">
+    </div>
+    
+    <title>Cardápio Digital</title>
+    <style>
+            .header {
+                     text-align: center;
+                    }
+
+            .header img {
+                        display: block;
+                        margin: 0 auto; 
+                        max-width: 100%;
+                        height: auto;
+                        }
+
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
+        .container { width: 60%; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        h1, h2 { text-align: center; color: #333; }
+        .category { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ddd; }
+        .cart { border-top: 2px solid black; margin-top: 20px; padding-top: 10px; background: #fff; padding: 15px; border-radius: 10px; }
+        .cart-item { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #ddd; }
+        button { background-color: #28a745; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; width: 100%; }
+        button:hover { background-color: #218838; }
+        .remove-btn { background-color: #dc3545; padding: 5px; }
+        .remove-btn:hover { background-color: #c82333; }
+        .resumo-pedido { background: #fff3cd; padding: 15px; border-radius: 10px; border: 1px solid #ffeeba; margin-top: 20px; }
+        .resumo-pedido h2 { color: #856404; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio Digital</h1>
+        <div id="menu"></div>
+        
+        <div class="cart">
+            <h2>Carrinho de Compras</h2>
+            <div id="cart-items"></div>
+            <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+            <button onclick="checkout()">Finalizar Pedido</button>
+        </div>
+        <div id="resumo" class="resumo-pedido" style="display: none;"></div>
+    </div>
+
+    <script>
+        const menu = {
+            "Hambúrgueres": [
+                { nome: "Cheeseburger", descricao: "Pão, carne, queijo.", preco: 15.00 },
+                { nome: "Duplo Bacon", descricao: "Dois hambúrgueres, bacon, queijo.", preco: 22.00 },
+                { nome: "Americano", descricao: "Dois hambúrgueres, bacon, queijo, ovo, batata palha.", preco: 22.00 }
+            ],
+            "Bebidas": [
+                { nome: "Refrigerante", descricao: "Lata 350ml", preco: 5.00 },
+                { nome: "Suco Natural", descricao: "Copo 400ml", preco: 8.00 },
+                { nome: "Suco - Caixinha", descricao: "250ml", preco: 3.00 } 
+            ], 
+            "Salgados": [
+                { nome: "coxinha", descricao: "180g", preco: 5.00 },
+                { nome: "Pastel", descricao: "200g", preco: 6.00 },
+                { nome: "Enroladinho", descricao: "200g", preco: 6.00 }
+            ]
+        };
+
+        let cart = [];
+
+        function renderMenu() {
+            const menuDiv = document.getElementById("menu");
+            menuDiv.innerHTML = "";
+            for (let category in menu) {
+                let section = document.createElement("div");
+                section.className = "category";
+                section.innerHTML = `<h2>${category}</h2>`;
+                menu[category].forEach((item, index) => {
+                    section.innerHTML += `
+                        <div>
+                            <input type="checkbox" id="${category}-${index}" onclick="addToCart('${category}', ${index})">
+                            <label for="${category}-${index}">
+                                ${item.nome} - ${item.descricao} - R$ ${item.preco.toFixed(2)}
+                            </label>
+                        </div>
+                    `;
+                });
+                menuDiv.appendChild(section);
+            }
+        }
+
+        function normalizeText(text) {
+            return text.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+        }
+
+        function addToCart(category, index) {
+            let item = menu[category][index];
+            let found = cart.find(i => i.nome === item.nome);
+            if (found) {
+                found.quantidade++;
+            } else {
+                cart.push({ ...item, quantidade: 1 });
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartDiv = document.getElementById("cart-items");
+            const totalSpan = document.getElementById("total");
+            cartDiv.innerHTML = "";
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.preco * item.quantidade;
+                cartDiv.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}</span>
+                        <button class="remove-btn" onclick="removeFromCart(${index})">Remover</button>
+                    </div>
+                `;
+            });
+            totalSpan.textContent = total.toFixed(2);
+        }
+
+        function removeFromCart(index) {
+            cart[index].quantidade--;
+            if (cart[index].quantidade === 0) {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+            let confirmar = confirm("Deseja realmente finalizar o pedido?");
+            if (!confirmar) {
+                alert("Pedido cancelado.");
+                return;
+            }
+            let nome = prompt("Digite seu nome completo:");
+            if (!nome || nome.trim() === "") {
+                alert("Por favor, preencha seu nome para continuar.");
+                return;
+            }
+
+            let endereco = prompt("Digite seu endereço para entrega:");
+            if (!endereco || endereco.trim() === "") {
+                alert("Por favor, preencha seu endereço para continuar.");
+                return;
+            }
+
+            let pagamento;
+            const validPayments = ["Cartao", "Dinheiro", "Pix"];
+            do {
+                pagamento = normalizeText(prompt("Escolha a forma de pagamento (Cartão/Dinheiro/Pix):").trim().toLowerCase());
+                pagamento = pagamento.charAt(0).toUpperCase() + pagamento.slice(1);
+                if (!validPayments.includes(pagamento)) {
+                    alert("Opção de pagamento inválida! Escolha entre Cartão, Dinheiro ou Pix.");
+                }
+            } while (!validPayments.includes(pagamento));
+            
+            let resumoDiv = document.getElementById("resumo");
+            resumoDiv.style.display = "block";
+            resumoDiv.innerHTML = `<h2>Resumo do Pedido</h2>`;
+            cart.forEach(item => {
+                resumoDiv.innerHTML += `<p>${item.quantidade}x ${item.nome} - R$ ${(item.preco * item.quantidade).toFixed(2)}</p>`;
+            });
+            resumoDiv.innerHTML += `<p><strong>Total:</strong> R$ ${document.getElementById("total").textContent}</p>`;
+            resumoDiv.innerHTML += `<p><strong>Nome:</strong> ${nome}</p>`;
+            resumoDiv.innerHTML += `<p><strong>Endereço:</strong> ${endereco}</p>`;
+            resumoDiv.innerHTML += `<p><strong>Pagamento:</strong> ${pagamento}</p>`;
+            alert("Pedido realizado com sucesso! Obrigado por comprar conosco.");
+            cart = [];
+            updateCart();
+        }
+
+        renderMenu();
+    </script>
+</body>
+</html>
