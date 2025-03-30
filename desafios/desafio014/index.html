@@ -29,8 +29,9 @@
             text-align: center;
         }
 
-        td.media {
+        th.media, td.media {
             color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -38,10 +39,10 @@
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Dsiciplinas</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Mádia</th>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Dsiciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Mádia</th>
             </tr>
             <tr>
                 <th>Nota 1</th>
@@ -50,7 +51,7 @@
         </thead>
         <tbody>
             <tr>
-                <th rowspan="4">Exatas</th>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -75,11 +76,11 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <td colspan="4" style="background-color: rgb(105, 105, 105);" class="media">Media de Exatas</td>
+                <th colspan="4" style="background-color: rgb(105, 105, 105);" class="media" scope="row">Media de Exatas</th>
                 <td style="background-color: rgb(105, 105, 105);" class="media">0.0</td>
             </tr>
             <tr>
-                <th rowspan="2">Humanas</th>
+                <th rowspan="2" scope="rowgroup">Humanas</th>
                 <td>História</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -94,7 +95,7 @@
                 <td>0.0</td>
             </tr>
             <tr>
-                <td colspan="4" style="background-color: rgb(105, 105, 105);" class="media">Média de Humanas</td>
+                <th colspan="4" style="background-color: rgb(105, 105, 105);" class="media" scope="row">Média de Humanas</th>
                 <td style="background-color: rgb(105, 105, 105);" class="media">0.0</td>
             </tr>
 
