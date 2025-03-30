@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(105, 105, 105);
+            color: white;
+        }
+        tr.destaque {
+            background-color: rgb(255, 215, 0); /* Cor de destaque */
+        }
+        col.amarelo {
+            background-color: rgb(255, 255, 0); /* Cor amarela */
+        }
+        col.vermelho {
+            background-color: rgb(255, 0, 0); /* Cor vermelha */
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercicio de Tabela</h1>
+    <table>
+        <colgroup>
+            <col class="amarelo">
+            <col class="vermelho">
+            <col class="amarelo">
+            <col class="vermelho">
+        </colgroup>
+        <caption></caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissao</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>João Silva</td>
+            <td>M</td>
+            <td>30</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>Maria Oliveira</td>
+            <td>F</td>
+            <td>28</td>
+            <td>Designer</td>
+        </tr>
+        <tr>    
+            <td>Pedro Santos</td>
+            <td>M</td>
+            <td>35</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Lucas Pereira</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Estudante</td>
+        </tr>
+        <tr>    
+            <td>Fernanda Costa</td>
+            <td>F</td>
+            <td>27</td>
+            <td>Arquiteta</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
