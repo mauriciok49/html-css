@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Escolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            
+        }
+
+        thead > tr > th {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(105, 105, 105);
+            color: white;
+        }
+
+        tr, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td.media {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2">Dsiciplinas</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2">Mádia</th>
+            </tr>
+            <tr>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4">Exatas</th>
+                <td>Matemática</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Fisíca</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Quimica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="background-color: rgb(105, 105, 105);" class="media">Media de Exatas</td>
+                <td style="background-color: rgb(105, 105, 105);" class="media">0.0</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Humanas</th>
+                <td>História</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                
+
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="background-color: rgb(105, 105, 105);" class="media">Média de Humanas</td>
+                <td style="background-color: rgb(105, 105, 105);" class="media">0.0</td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
