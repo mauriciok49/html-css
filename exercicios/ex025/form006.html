@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>exemplo de Formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="icor">cor: </label>
+            <input type="color" name="icor" id="icor" value="#000000"><br>
+        </p>
+
+        <p>
+            <label for="inivel">Nivel de satisfacao: </label>
+            <input type="range" name="inivel" id="inivel" min="0" max="10" step="1" value="5"><br>
+        </p>
+
+
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+
+
+    
+</body>
+</html>
