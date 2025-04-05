@@ -30,6 +30,22 @@
         </p>
 
         <p>
+            <label for="isprof">Profissao: </label>
+            <input type="isprof" name="prof" id="isprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="professor">professor</option>
+                <option value="aluno">aluno</option>
+                <option value="funcionario">funcionario</option>
+                <option value="estagiario">estagiario</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label>
+            
+            <textarea name="msg" id="imsg" cols="30" rows="30"></textarea>
+        </p>
+
+        <p>
             <input type="submit" value="enviar">
             <input type="reset" value="limpar">
         </p>
