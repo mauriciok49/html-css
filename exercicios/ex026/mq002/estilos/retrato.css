@@ -3,7 +3,7 @@
 /* aparelho de pé */
 
 body {
-    background: url(../imagens/cev-portrait.jpg) no-repeat;
+    background-image: url(../imagens/cev-portrait.jpg);
     background-position: center bottom;
-    background-size: contain;
+    
 }
