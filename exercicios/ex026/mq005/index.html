@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudoutamnho()">
     <header>
         <h1>Meu Site</h1>
         <i id="burguer" class="material-icons" onclick="clickmenu()">menu</i>
@@ -26,7 +27,6 @@
     <main>
         <article>
             <h2>Testando media query</h2>
-            <i class="material-icons">Menu</i>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti magni architecto iure dolorem doloribus. Cum natus aliquam aspernatur et hic quasi, magni est sequi possimus. Cum voluptas officiis quos perferendis. Lorem ipsum dolor sit amet conSsectetur, adipisicing elit. Dolore repudiandae cum consectetur iusto quas, laborum consequatur ab deserunt quia nobis iste placeat ducimus? Harum eaque libero blanditiis placeat officia tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem saepe possimus consequatur cum odit, labore aspernatur numquam nihil laudantium, et illo cumque fuga quos blanditiis totam, nesciunt quasi doloribus.</p>
 
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti magni architecto iure dolorem doloribus. Cum natus aliquam aspernatur et hic quasi, magni est sequi possimus. Cum voluptas officiis quos perferendis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore repudiandae cum consectetur iusto quas, laborum consequatur ab deserunt quia nobis iste placeat ducimus? Harum eaque libero blanditiis placeat officia tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem saepe possimus consequatur cum odit, labore aspernatur numquam nihil laudantium, et illo cumque fuga quos blanditiis totam, nesciunt quasi doloribus.</p>
@@ -37,6 +37,14 @@
     </main>
 
     <script>
+
+        function mudoutamnho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
         function clickmenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
