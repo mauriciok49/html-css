@@ -15,6 +15,7 @@ body {
     align-items: center;
     background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: grid;
     font-family: 'Dosis', sans-serif;
     font-weight: 700;
