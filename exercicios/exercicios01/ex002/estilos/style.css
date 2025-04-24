@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'section main aside'
+    'footer footer footer';
+    gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+}
+
+
+.header {
+    display: flex;
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border: 2px solid #000000;
+    justify-content: space-between;
+    background: linear-gradient(to right, #23ABD5, #56D523, #23ABD5);
+    
+}
+
+.header img {
+    width: 60px;
+    height: 60px;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-content: center;
+    height: 20px;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #a53d3d;
+    width: 110px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #73ff00;
+    transition: ease-in-out 0.5s;
+}
+
+.main {
+    grid-area: main;
+    padding: 20px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0px 10px 33px #00000018;
+}
+
+main h1, h2 {
+    margin-bottom: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 5px;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0px 10px 33px #00000018;
+    margin-right: 10px;
+}
+
+.aside iframe {
+    border-radius: 10px;
+}
+
+.section {
+    height: 30vh;
+    margin-left: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    box-shadow: 0px 10px 33px #00000018;
+}
+
+.section:hover {
+    background-color: #ff000048;
+    transition: ease-in-out 1s;
+    transform: scale(1.02);
+}
+
+section img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+section img:hover {
+    transform: scale(1.02);
+    transition: ease-in-out 1s;
+}
+
+
+
+
+
+.footer {
+    grid-area: footer;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border: 1px solid #000000;
+    height: 100px;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+}
+footer a:hover {
+    color: #0011ff65;
+    transition: ease-in-out 0.5s;
+    text-decoration-line: none;
+}
+
