@@ -23,20 +23,12 @@ body {
     }
     .container-main{
         display: flex; 
-
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-        
-        
+        transition: all 0.5s ease-in-out;
     }
-    .sidebar-left {
-        display: none;
-    }
-    .sidebar-right {
-        display: none;
-    }
+
     .main-content {
         display: flex;
         flex-direction: column;
@@ -44,13 +36,7 @@ body {
         width: 80vw;
         height: 95vh;
         border-radius: 10px;
-    }
-    .siderbar-bottom-left {
-        display: none;
-    }
-    
-    .sidebar-bottom-right {
-        display: none;
+        transition: all 0.2s ease-in-out;
     }
 
     .section {
@@ -60,7 +46,21 @@ body {
         height: 95vh;
     }
 
+    .sidebar-left {
+        display: none;
+        
+    }
+    .sidebar-right {
+        display: none;
+    }
     
+    .siderbar-bottom-left {
+        display: none;
+    }
+    
+    .sidebar-bottom-right {
+        display: none;
+    }
 
     .footer {
         display: flex;
