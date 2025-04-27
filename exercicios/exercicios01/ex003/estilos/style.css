@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -31,13 +33,21 @@ nav img {
     'sidebar-left main sidebar-right'
     'sidebar-b-left main sidebar-b-r'
     'footer footer footer';
-    grid-template-columns: minmax(200px, 300px) 400px minmax(200px, 300px);
+    grid-template-columns: minmax(200px, 300px) 500px minmax(200px, 300px);
     grid-template-rows: 1fr 65% 1fr;
     justify-content: center;
     height: 100vh;
     gap: 10px;
-    margin-top: 20px
+    margin-top: 20px;
     
+}
+
+.container-main img {
+    width: 100%;
+    object-fit: cover;
+    height: 50%;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.2s ease-in-out;
 }
 
 .main-content {
@@ -53,18 +63,40 @@ nav img {
     border-radius: 10px;
     margin-top: -5px;
     text-align: center;
+    transition: all 0.1s ease-in-out;
+    
 }
 
 .article {
     display: flex;
     flex: auto;
-    flex-direction: column;
-    justify-content: center;
     height: 100vh;
+    justify-content: space-between;
     margin: 5px;
     border-radius: 10px;
+    text-align: center;
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
+    transition: all 0.1s ease-in-out;
 }
+
+.article img {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.1s ease-in-out;
+    
+}
+
+.article img.img-left {
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.article img.img-right {
+    border-radius: 0px 10px 10px 0px;
+    transition: all 0.1s ease-in-out;
+}
+
 
 .sidebar-left {
     grid-area: sidebar-left;
@@ -81,6 +113,12 @@ nav img {
     border-radius: 10px;
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
     text-align: center;
+}
+
+.sidebar-left img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .siderbar-bottom-left {
@@ -106,6 +144,7 @@ nav img {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     box-shadow: 0px -5px 5px rgba(8, 8, 8, 0.342);
+    background-color: #000;
 
 }
 
