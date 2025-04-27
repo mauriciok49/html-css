@@ -26,6 +26,11 @@ nav img {
     transition: all 0.3s ease-in-out;
 }
 
+nav img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+}
+
 .container-main{
     display: grid;
     width: 100%;
@@ -79,6 +84,11 @@ nav img {
     transition: all 0.1s ease-in-out;
 }
 
+.article:hover {
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+    transform: scale(1.01);
+}
+
 .article img {
     width: 50%;
     height: 100%;
@@ -102,9 +112,13 @@ nav img {
     grid-area: sidebar-left;
     height: 30vh;
     border-radius: 10px;
-    transition: all 1s ease-in;
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
     text-align: center;
+}
+
+.sidebar-left:hover {
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+    transform: scale(1.01);
 }
 
 .sidebar-right {
@@ -115,19 +129,22 @@ nav img {
     text-align: center;
 }
 
-.sidebar-left img {
-    width: 100%;
-    height: 50%;
-    border-radius: 10px 10px 0px 0px;
+.sidebar-right:hover {
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+    transform: scale(1.01);
 }
 
 .siderbar-bottom-left {
     grid-area: sidebar-b-left;
     height: 30vh;
     border-radius: 10px;
-    transition: all 1s ease-in-out;
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
     text-align: center;
+}
+
+.siderbar-bottom-left:hover {
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+    transform: scale(1.01);
 }
 
 .sidebar-bottom-right {
@@ -137,6 +154,12 @@ nav img {
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
     text-align: center;
 }
+
+.sidebar-bottom-right:hover {
+    box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+    transform: scale(1.01);
+}
+
 
 .footer {
     grid-area: footer;

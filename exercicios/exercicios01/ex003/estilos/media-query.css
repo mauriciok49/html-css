@@ -61,10 +61,15 @@
     }
 
     .article {
-        transition: all 1s ease-in-out;
+        transition: all 0.1s ease-in-out;
         box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
         height: 100px;
         font-size: 0.8em;
+    }
+
+    .article:hover {
+        box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
+        transform: scale(1.01);
     }
 
     .article img {
