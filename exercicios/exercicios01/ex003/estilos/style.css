@@ -75,22 +75,63 @@ nav img:hover {
 .article {
     display: flex;
     flex: auto;
-    height: 100vh;
+    height: 100px;
     justify-content: space-between;
     margin: 5px;
+    overflow: hidden;
+    position: relative;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 0px 6px rgba(8, 8, 8, 0.205);
     transition: all 0.1s ease-in-out;
 }
 
+
+
+.article p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(190, 35, 35, 0.8);
+    color: rgb(29, 29, 29);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.1s ease-in-out 0.1s ease-in-out;
+}
+
+.article:hover p {
+    width: 50%;
+    opacity: 1;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.article:hover p.text-left {
+    left: 1;
+}
+
+.article:hover p.text-right {
+    transform: translateX(-100%);
+}
+
 .article:hover {
+    display: flex;
+    justify-content: space-between;
     box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.363);
     transform: scale(1.01);
 }
 
 .article img {
-    width: 50%;
+    max-width: 100%;
+    object-fit: cover;
     height: 100%;
     border-radius: 10px 10px 0px 0px;
     transition: all 0.1s ease-in-out;
@@ -98,15 +139,29 @@ nav img:hover {
 }
 
 .article img.img-left {
-    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
     transition: all 0.1s ease-in-out;
+}
+
+.article:hover img.img-left {
+    border-radius: 10px 0px 0px 10px;
+    transform: translateX(-50%);
 }
 
 .article img.img-right {
-    border-radius: 0px 10px 10px 0px;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
     transition: all 0.1s ease-in-out;
 }
 
+.article:hover img.img-right {
+    border-radius: 0px 10px 10px 0px;
+    transform: translateX(50%);
+    object-fit: cover;
+}
 
 .sidebar-left {
     grid-area: sidebar-left;
