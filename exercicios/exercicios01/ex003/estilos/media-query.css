@@ -60,10 +60,17 @@
         
     }
 
+    .section a {
+        display: flex;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    }
+
     .article {
         display: flex;
         flex: auto;
-        height: 100px;
+        height: 165px;
         justify-content: space-between;
         margin: 5px;
         overflow: hidden;
