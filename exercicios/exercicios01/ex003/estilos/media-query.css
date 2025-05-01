@@ -106,20 +106,9 @@
         border-radius: 0px 10px 10px 0px;
     }
     
-    .sidebar-left {
+    .sidebar {
         display: none;
         
-    }
-    .sidebar-right {
-        display: none;
-    }
-    
-    .sidebar-bottom-left {
-        display: none;
-    }
-    
-    .sidebar-bottom-right {
-        display: none;
     }
 
     .footer {
