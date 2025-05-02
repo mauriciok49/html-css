@@ -10,7 +10,70 @@
     display: grid;
     grid-template-areas: 
         "header header header"
-        "main aside aside"
+        "main main aside"
         "footer footer footer";
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    height: 10vh;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+
+li {
+    margin: 0 10px;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ca7474;
+    height: 90vh;
+    margin-left: 10px;
+    border-radius: 10px;
+
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: aside;
+    background-color: #f4f4f4;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+article {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: #4CAF50 solid 1px;
+    height: 20vh;
+}
+
+.footer {
+    grid-area: footer;
+    height: 10vh;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    margin-top: 10p;
 }
 
