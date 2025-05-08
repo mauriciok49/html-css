@@ -31,13 +31,14 @@ body {
     background-color: #2C3DC4;
     grid-area: header;
     border: #000 1px solid;
+    position: fixed;
+    width: 100%;
 }
 
 .main {
     grid-area: main;
     justify-items: center;
-    border: #c91818 1px solid;
-    max-width: 100%;
+    margin-top: 112px;
 }
 
 .footer {
@@ -52,12 +53,12 @@ body {
     margin: 20px;
     max-height: 100%;
     width: 70vw;
-    gap: 10px;
+    gap: 20px;
     
 }
 
 .collum1 {
-    border: #27cfdb 1px solid;
+   
     display: flex;
     flex: 1.2;
     border-radius: 10px;
@@ -66,17 +67,33 @@ body {
 }
 
 .collum2 {
-    border: #27cfdb 1px solid;
+    
     display: flex;
     flex-direction: column;
     flex: 2.0;
     border-radius: 10px;
-    justify-content: space-between;
+    box-shadow: 0px 0px 5px #00000079;
 
 }
 
+.items {
+    width: 100%;
+    height: 97%;
+    border: #eb0000 1px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.todos_aovivo{
+    width: 100%;
+    height: 3%;
+    border: #d61f1f 1px solid;
+    border-radius: 10px 10px 0px 0px;
+}
+
 .collum3 {
-    border: #27cfdb 1px solid;
+    
     display: flex;
     flex: 1.6;
     border-radius: 10px;
@@ -86,8 +103,8 @@ body {
 
 .item {
     display: flex;
-    border: #96db27 1px solid;
-    height: 20vh;
+    border: #3c16c4 1px solid;
+    height: 10%;
     width: 100%;
     
     
@@ -97,10 +114,6 @@ body {
     border-radius: 0px 0px 10px 10px;
 }
 
-.item:first-child {
-    border-radius: 10px 10px 0px 0px;
-}
-
 .card-l1 {
     display: flex;
     border: #c91818 1px solid;
@@ -108,12 +121,12 @@ body {
     height: 30vh;
     border-radius: 10px;
     flex-direction: column;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .competitions {
     display: flex;
     width: 100%;
-    border: #27db54 1px solid;
     height: 70%;
     flex-direction: column;
 }
@@ -147,15 +160,16 @@ body {
     width: 100%;
     height: 65vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
 
 }
 
 .card-l3 {
     display: flex;
-    border: #e45555 1px solid;
     width: 100%;
     height: 17vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .card-r1 {
@@ -164,6 +178,7 @@ body {
     width: 100%;
     height: 10vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .card-promocional {
@@ -181,6 +196,7 @@ body {
     height: 28vh;
     border-radius: 10px;
     flex-direction: column;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .destacado {
@@ -225,6 +241,7 @@ body {
     width: 100%;
     height: 28vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .card-r4 {
@@ -233,14 +250,40 @@ body {
     width: 100%;
     height: 23vh;
     border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
-.card-r4 {
-    display: flex;
-    border: #e45555 1px solid;
+.comparar_estatisticas {
     width: 100%;
-    height: 23vh;
-    border-radius: 10px;
+    border: #000 1px solid;
+    height: 15%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.jogador_1 {
+    width: 100%;
+    border: #000 1px solid;
+    height: 28%;
+}
+
+.line {
+    width: 100%;
+    border: #000 1px solid;
+    height: 4%;
+}
+
+.jogador_2 {
+    width: 100%;
+    border: #000 1px solid;
+    height: 28%;
+}
+
+.compare_button {
+    width: 100%;
+    border: #000 1px solid;
+    height: 25%;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .card-r5 {
@@ -249,22 +292,125 @@ body {
     width: 100%;
     height: 55vh;
     border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
+
+
+.bloco_2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: #b80000 1px solid;
+    border-radius: 0px 0px 10px 10px;
+
+
+}
+
+.melhores_jogadores {
+    width: 100%;
+    height: 7%;
+    border: #000 1px solid;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.heatmap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45%;
+    border: #d400ff 1px solid;
+}
+
+.player {
+    width: 100%;
+    height: 10%;
+    border: #583333 1px solid;
+}
+
+
+.mostrar_mais {
+    width: 100%;
+    height: 7%;
+    border: #1100ff 1px solid;
+    border-radius: 0px 0px 10px 10px;
+}
 .card-r6 {
     display: flex;
     border: #e45555 1px solid;
     width: 100%;
     height: 17vh;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px #00000079;
+}
+
+.nota_sofascore {
+    display: flex;
+    width: 95%;
+    height: 90%;
+    border: #080808 1px solid;
+    border-radius: 10px;
+}
+
+.logo_nota {
+    width: 30%;
+    height: 100%;
+    border: #00ff80 1px solid;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.texto_nota {
+    width: 70%;
+    border: #ff0000 1px solid;
+    border-radius: 0px 10px 10px 0px ;
 }
 
 .card-r7 {
     display: flex;
+    flex-direction: column;
     border: #e45555 1px solid;
     width: 100%;
     height: 33vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
+}
+
+.odds_destaque {
+    width: 100%;
+    height: 10%;
+    border: #00ff40 1px solid;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.odds {
+    width: 100%;
+    height: 90%;
+    border: #ff0000 1px solid;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.index_odd {
+    width: 100%;
+    height: 80%;
+    border: #ff0000 1px solid;
+
+}
+
+.span {
+    width: 100%;
+    height: 15%;
+    border: #f2f700 1px solid;
+}
+
+.real_odds {
+    width: 100%;
+    height: 20%;
+    border: #e43d3d 1px solid;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .card-r8 {
@@ -273,6 +419,22 @@ body {
     width: 100%;
     height: 30vh;
     border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px #00000079;
+}
+
+.baixe_apps {
+    width: 100%;
+    height: 20%;
+    border: #44a067 1px solid;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+.app_tag {
+    width: 100%;
+    height: 80%;
+    border: #ff0000 1px solid;
+    border-radius: 0px 0px 10px 10px ;
 }
 
 .card-r9 {
@@ -281,6 +443,7 @@ body {
     width: 100%;
     height: 30vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #00000079;
 }
 
 .card-r10 {
@@ -288,5 +451,16 @@ body {
     border: #e45555 1px solid;
     width: 100%;
     height: 30vh;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px #00000079;
+}
+
+.about {
+    width: 95%;
+    height: 95%;
+    border: #ff0000 1px solid;
     border-radius: 10px;
 }
