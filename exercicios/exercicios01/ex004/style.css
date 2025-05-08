@@ -30,7 +30,6 @@ body {
     height: 112px;
     background-color: #2C3DC4;
     grid-area: header;
-    border: #000 1px solid;
     position: fixed;
     width: 100%;
 }
@@ -42,7 +41,6 @@ body {
 }
 
 .footer {
-    border: #27cfdb 1px solid;
     grid-area: footer;
     height: 814.09px;
     background-color: #2C3DC4;
