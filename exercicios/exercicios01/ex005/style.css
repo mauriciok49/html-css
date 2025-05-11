@@ -32,7 +32,6 @@ header {
     left: 0;
     display: flex;
     justify-content: center;
-
     ul {
         height: 100%;
         width: 100%;
@@ -53,4 +52,58 @@ header {
         }
 
     }
+}
+
+
+.unity-wrapper {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border: #f85103;
+
+}
+
+.unity-link {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.unity-image {
+    height: 100%;
+    z-index: 1;
+    overflow: visible;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+    background-image: url(iphone16.jpg);
+    background-position: center bottom;
+}
+
+.content {
+    overflow: hidden;
+    display: block;
+    flex-direction: column;
+    background-color: #e30000;
+    height: 580PX;
+    margin-top: 45px;
+}
+.unity-copy {
+    border: #148dffaf 1px solid;
+    width: 100%;
+    height: 291.94px;
+    padding-top: 47px;
+    text-align: center;
 }
