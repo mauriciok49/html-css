@@ -32,6 +32,7 @@ header {
     left: 0;
     display: flex;
     justify-content: center;
+    z-index: 5;
     ul {
         height: 100%;
         width: 100%;
@@ -54,6 +55,29 @@ header {
     }
 }
 
+.home-page-collection {
+    display: grid;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 45px;
+    gap: 10px;
+}
+
+.iphone-family {
+    width: 100%;
+    height: 100%;
+    border: #e30000 1px solid;
+}
+
+.macbook-air {
+    display: flex;
+    border: #b9e300 1px solid;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    columns: 1;
+}
+
 
 .unity-wrapper {
     display: flex;
@@ -63,16 +87,21 @@ header {
     height: 100%;
     flex-direction: column;
     overflow: hidden;
-    border: #f85103;
+    border: #b6846c;
+    justify-content: space-between;
+    z-index: 4;
+    position: relative;
 
 }
 
 .unity-link {
-    display: flex;
+    position: absolute;
+    display: block;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 3;
 }
 
 .unity-image {
@@ -85,25 +114,73 @@ header {
 
 }
 
-figure {
+.iphone-family-pro {
     width: 100%;
     height: 100%;
     background-image: url(iphone16.jpg);
     background-position: center bottom;
 }
 
+.macbook-air-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(macbookair.jpg);
+    background-position: center center;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+}
+
+
+
+.apple-watch-series-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(apple-watch-series.jpg);
+    background-position: center bottom;
+}
+
+
 .content {
     overflow: hidden;
     display: block;
     flex-direction: column;
-    background-color: #e30000;
+    background-color: #f5f5f7;
     height: 580PX;
-    margin-top: 45px;
+    
 }
 .unity-copy {
-    border: #148dffaf 1px solid;
+    display: flex;
+    border: #ffc814af 1px solid;
     width: 100%;
     height: 291.94px;
     padding-top: 47px;
     text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.unity-copy-macbook {
+    display: flex;
+    border: #ffc814af 1px solid;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: #5be300 1px solid;
+    z-index: 4;
+    position: absolute;
+}
+
+.wrapper-top {
+    width: 100%;
+    height: 192.6px;
+    border: #000e1b 1px solid;
+}
+
+.wrapper-bottom {
+    width: 100%;
+    height: 62.94px;
+    border: #0071e3 1px solid;
 }
