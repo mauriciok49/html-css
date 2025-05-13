@@ -110,6 +110,8 @@ header {
     height: 291.94px;
     padding-top: 47px;
     text-align: center;
+    justify-items: center;
+    align-items: center;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -185,7 +187,39 @@ header {
     height: 100%;
     background-image: url(apple-watch-series.jpg);
     background-position: center bottom;
+    border: #0071e3 1px solid;
+}
+
+.visual-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+    
+
+
+}
+
+.logo-image-applewatch {
+    background-image: url(hero_logo_apple_watch_series_10__dla4dkv1wfue_large.png);
+    background-repeat: no-repeat;
+    width: 210px;
+    height: 80px;
+    background-position: center;
 }
 
 
+
+.sub-head {
+    border: #0071e3 1px solid;
+}
+
+h2 {
+     border: #0071e3 1px solid;
+}
 
