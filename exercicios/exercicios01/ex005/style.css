@@ -100,7 +100,8 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
+    z-index: 6;
+    
 }
 
 .unity-copy {
@@ -118,7 +119,6 @@ header {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    z-index: 4;
     pointer-events: none;
 }
 
@@ -137,14 +137,13 @@ header {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    z-index: 4;
+    z-index: 6;
     pointer-events: none;
 }
 
 
 .unity-image {
     height: 100%;
-    z-index: 1;
     overflow: visible;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -177,7 +176,6 @@ header {
     flex-direction: column;
     justify-content: space-between;
     /*/border: #5be300 1px solid;/*/
-    z-index: 4;
     position: absolute;
 }
 
@@ -201,7 +199,6 @@ header {
     height: 100%;
     background-image: url(macbookair.jpg);
     background-position: center center;
-    z-index: 1;
     display: block;
     overflow: visible;
 }
@@ -300,7 +297,7 @@ h2 {
     position: relative;
     text-decoration: none;
     margin-top: 19px;
-    z-index: 5;
+    z-index: 8;
     display: inline-block;
 }
 
@@ -323,6 +320,8 @@ h2 {
     text-decoration: none;
     border-color: rgba(0, 0, 0, 0);
     pointer-events: all;
+    position: relative;
+    z-index: 7;
 
 }
 
@@ -350,6 +349,8 @@ h2 {
     color: #06c;
     border-color: #06c;
     pointer-events: all;
+    position: relative;
+    z-index: 7;
 }
 
 .button-terciary:hover {
@@ -360,6 +361,57 @@ h2 {
 .footnote-ai {
     text-decoration: none;
     color: #000;
+}
+
+.home-page-collection-promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 580px;
+    background-color: #fff;
+    grid-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 12px;
+    border-bottom: var(--gutter-width) solid var(--gutter-color);
+}
+
+.apple-watch-pride {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+}
+
+.macbook-pro {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+}
+
+.ipad-air {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+}
+
+
+.airpods-pro-2 {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+}
+
+.AirPods-4 {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+}
+
+.apple-intelligence {
+    height: 580px;
+    width: 100%;
+    border: #000 1px solid;
+    
 }
 
 
